@@ -1,4 +1,6 @@
 RailsWorkshop1::Application.routes.draw do
+  resources :users
+
   resources :authors
 
   resources :tags
