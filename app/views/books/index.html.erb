@@ -6,6 +6,7 @@
         <td><%= book.title%></td>
         <td><%= book.isbn%></td>
         <td><%= book.label_id%></td>
+        <td><%=  book.publisher.nil? ? "" : book.publisher.name%></td>
         <td><%= link_to 'Show', book%></td>
         <td><%= link_to 'Edit', edit_book_path(book)%></td>
         <td><%= link_to 'Delete', book, method: :delete, data: {confirm: 'Are you sure?'} %></td>

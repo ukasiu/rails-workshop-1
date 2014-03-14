@@ -18,5 +18,8 @@
   <%= f.label :label_id%>
   <%= f.text_field :label_id%></br>
 
+  <%= f.label :publisher %>
+  <%= f.select :publisher_id, Publisher.all.collect {|p| [ p.name, p.id ] }, { include_blank: true } %>
+
   <%= f.submit%>
 <%end%>
