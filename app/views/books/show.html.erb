@@ -10,3 +10,15 @@ ISBN: <%= @book.isbn %>
 Publisher: <%= @book.publisher.nil? ? "" : @book.publisher.name %>
 <%#= @book.publisher.name if @book.publisher %>
 </p>
+
+<p>
+<% if @book.tags.present? %>
+  <ul>
+  <% @book.tags.each do |tag| %>
+    <li><%= tag.name %></li>
+  <% end %>
+  </ul>
+
+<% end %>
+
+</p>

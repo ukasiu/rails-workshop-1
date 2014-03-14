@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def show
-    @book = Book.find params[:id]
+    @book = Book.find(params[:id])
   end
 
   def index
@@ -41,7 +41,8 @@ class BooksController < ApplicationController
 
   private
   def books_params
-    params.require(:book).permit(:title, :isbn, :label_id, :publisher_id)
+    params.require(:book).permit(:title, :isbn, :label_id,
+     :publisher_id, :tag_ids => [], :author_ids => [])
   end
 
 end

@@ -20,6 +20,11 @@
 
   <%= f.label :publisher %>
   <%= f.select :publisher_id, Publisher.all.collect {|p| [ p.name, p.id ] }, { include_blank: true } %>
+  </br>
+  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) %>
+  </br>
 
+  <%= f.collection_select :author_ids, Author.all, :id, :name, {}, multiple: true %>
+  <br/>
   <%= f.submit%>
 <%end%>
