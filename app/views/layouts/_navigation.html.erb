@@ -1,4 +1,14 @@
 <div style="float:right">
+  <strong>
+    <% if logged_in? %>
+      Hi, <%= current_user.name %>! |
+      <%= link_to 'Log out', '/log_out' %>
+    <% else %>
+      <%= link_to 'Log in',
+        new_session_path %>
+    <% end %>
+  </strong>
+  |
   <%= link_to 'Books', books_path %> | 
   <%= link_to 'Publishers', publishers_path %> |
   <%= link_to 'Authors', authors_path %> |

@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :authorize, only: [:create,:new]
   def show
     @book = Book.find(params[:id])
   end

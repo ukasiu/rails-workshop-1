@@ -1,4 +1,8 @@
 RailsWorkshop1::Application.routes.draw do
+  get "log_in", to: "sessions#new"
+  get "log_out", to: "sessions#destroy"
+  resources :sessions
+
   resources :users
 
   resources :authors
@@ -8,6 +12,8 @@ RailsWorkshop1::Application.routes.draw do
   resources :publishers
 
   resources :books
+
+  root 'books#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
