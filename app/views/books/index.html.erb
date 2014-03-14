@@ -1,0 +1,14 @@
+<table>
+  <tbody>
+    <% @books.each do |book|%>
+      <tr>
+        <td><%= book.id%></td>
+        <td><%= book.title%></td>
+        <td><%= book.isbn%></td>
+        <td><%= book.label_id%></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+
+<%= link_to 'New book', '/books/new', class: 'link'%>

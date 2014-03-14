@@ -1,0 +1,12 @@
+<%= form_for :book, url: '/books' do |f|%>
+  <%= f.label :title%>
+  <%= f.text_field :title%></br>
+
+  <%= f.label :isbn%>
+  <%= f.text_field :isbn%></br>
+
+  <%= f.label :label_id%>
+  <%= f.text_field :label_id%></br>
+
+  <%= f.submit%>
+<%end%>
